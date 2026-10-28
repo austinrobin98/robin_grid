@@ -1,0 +1,64 @@
+/* CSS Stylesheet for the Webpage */
+/* Identifies the overall look and feel of the webpage */
+body {
+    background-color: #e8f0e8;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #243b2a;
+}
+
+/* Header Styles explains the appearance and behavior of the webpage header */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* The gallery's Grid container arranges the photos into responsive rows and columns.
+    Auto-fit adjusts the number of columns, while minmax(200px, 1fr) lets them grow and shrink as needed */
+.nature-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 24px;
+} 
+
+/* .photo rule creates individual photo cards, rounds their corners, and keeps images within their boundaries. */
+.photo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Object-fit property fills the image area without stretching the photo, although parts may be cropped */
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* This rule makes the captions provide descriptions beneath the photographs and that their styling keeps the text centered */
+.photo figcaption {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Makes the featured photo span across the available columns to stand out from the rest */
+.featured-photo {
+    grid-column: 1/-1;
+}
+
+/* Footer styles, providing a consistent look and feel for the footer section of the webpage */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
